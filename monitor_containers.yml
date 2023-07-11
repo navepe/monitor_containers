@@ -25,8 +25,8 @@
       mail:
         host: email-smtp.us-east-1.amazonaws.com
         port: 25
-        username: AKIAVAJR3OPPCQ4UR6EA
-        password: BKjtrrUFV8qy+D1G3cjQE+0rdFkkNw+AZBXmIOH+5nHN
+        username: 
+        password: 
         from: alertmanager@webhose.io
         to: <devops-alerts-aaaaimnya6pdacs5sfd7ewl7me@webz-io.slack.com>
         subject: "Number of Replicas below 80% on {{ ansible_hostname }}"
