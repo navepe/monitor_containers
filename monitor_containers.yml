@@ -6,11 +6,6 @@
       command: docker service ls --format "{{ '{{' }} .Name {{ '}} '  '{{' }} .Mode {{ '}} ' '{{' }} .Replicas {{ '}}' }}"
       register: replicas
 
-    - name: manipulting
-      debug:
-        msg: "{{ item }}"
-      loop: "{{ replicas.stdout_lines }}"
-
     - name: Get current state
       shell: "echo '{{ item }}' | awk '{print$3}' | cut -d '/' -f1"
       with_items: "{{ replicas.stdout_lines }}"
